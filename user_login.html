@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+  <link rel="stylesheet" href="商家界面style.css" type="text/css" />
+  <script>
+    function redirectToPage(selectElement) {
+      var selectedValue = selectElement.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    }
+
+    function showUserAgreement() {
+      alert("用户协议: \n\n欢迎使用我们的外卖网站服务！在您使用我们的服务之前，请仔细阅读以下条款。1. 服务描述我们的外卖网站旨在为顾客提供方便快捷的外卖订购服务。2. 免责声明在法律允许的范围内，我们将尽最大努力确保我们的服务的安全性和可靠性。");
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>用户登录</h1>
+    </div>
+    <br class="clearfloat" />
+    <div id="menu">
+      <a href="外卖系统首页.html">主页</a>
+      <a href="#">活动</a>
+      <a href="联系我们.html">联系我们</a>
+    </div>
+    <br class="clearfloat" />
+    <div id="mainContent">
+      <a href="user_register.html" id="注册界面">没有账号？去注册</a>
+      <form method="post" action="userlogin.php">
+        用户名:
+        <input name="username" type="text">
+        密码:
+        <input name="password" type="password">
+        角色：
+        <select id="pageSelect" name="pages" onchange="redirectToPage(this)">
+          <option value="user_login.html" selected>用户</option>
+          <option value="商家登录.html">商家</option>
+          <option value="外卖员登录.html">外卖员</option>
+          <option value="管理员登录.html">管理员</option>
+        </select>
+        <a href="#" onclick="showUserAgreement()">用户协议</a>
+        <input type="submit" name="submit" id="submit" value="登陆">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
