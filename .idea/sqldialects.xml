@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/ds_mall（后端完整版）/src/main/resources/ds_mall_local.sql" dialect="MySQL" />
+  </component>
+</project>
