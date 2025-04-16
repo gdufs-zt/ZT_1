@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="商家界面style.css" type="text/css" />
+    <style>
+        #mainContent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #mainContent a {
+            width: calc(33.33% - 20px);
+            /* 每个容器占一排的三分之一并减去外边距 */
+            margin: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            box-sizing: border-box;
+            /* 确保padding和border包含在宽度内 */
+        }
+
+        #mainContent a img {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            /* 确保图片填满容器且保持内容覆盖 */
+        }
+
+        #mainContent a:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        #pic1 {
+            height: 250px;
+            width: 800px;
+        }
+    </style>
+    <script type="text/javascript">
+        var i;
+        var cars = new Array();
+        cars[0] = "特惠1.jpg";
+        cars[1] = "特惠2.jpg";
+        cars[2] = "特惠3.jpg";
+        cars[3] = "特惠4.jpg";
+
+        n = 0;
+        function display() {
+            n++;
+            if (n == cars.length)
+                n = 0;
+            document.getElementById("pic").innerHTML = "<img src='images/" + cars[n] + "' id='pic1'>";
+            setTimeout("display()", 1000);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>鳄了吗</h1>
+        </div>
+        <br class="clearfloat" />
+        <div id="menu">
+            <a href="#"> 主页 </a>
+            <a href="#"> 活动 </a>
+            <a href="商家-联系我们.html"> 联系我们 </a>
+            <a href="user_login.html"> 登录 </a>
+            <a href="personal_center.html">个人中心</a>
+        </div>
+        <br class="clearfloat" />
+        <table>
+            <tr>
+                <td>
+                    <div id="pic">
+                        <img src="images/蜜雪冰城.png" id="pic1" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            display();
+        </script>
+        <br>
+        <div id="mainContent">
+            <a href="主菜点餐界面.php">
+                <img src="images/寻味.jpg" alt="寻味" class="pic2" width="300" height="300">
+            </a>
+            <a href="#">
+                <img src="images/蜜雪冰城.png" alt="蜜雪冰城" class="pic2" width="300" height="300">
+            </a>
+            <a href="#">
+                <img src="images/麦当劳.jpg" alt="麦当劳" class="pic2" width="300" height="300">
+            </a>
+            <a href="#">
+                <img src="images/肯德基.jpg" alt="肯德基" class="pic2" width="300" height="300">
+            </a>
+            <a href="#">
+                <img src="images/麦当劳.jpg" alt="真功夫" class="pic2" width="300" height="300">
+            </a>
+            <a href="#">
+                <img src="images/必胜客.jpg" alt="必胜客" class="pic2" width="300" height="300">
+            </a>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

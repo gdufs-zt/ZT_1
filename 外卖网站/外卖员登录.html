@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>登录界面</title>
+  <link rel="stylesheet" href="商家界面style.css" type="text/css" />
+  <script>
+    function redirectToPage(selectElement) {
+      var selectedValue = selectElement.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>鳄了吗</h1>
+    </div>
+    <br class="clearfloat" />
+    <div id="menu">
+      <a href="外卖系统首页.html"> 主页 </a>
+      <a href="#"> 活动 </a>
+      <a href="商家-联系我们.html"> 联系我们 </a>
+    </div>
+    <br class="clearfloat" />
+    <div id="mainContent">
+      <a href="外卖员注册.html" ID="注册界面">没有账号？去注册</a>
+      <form method="post" action="外卖员登录.php">
+        用户名:
+        <input name="user" type="text">
+        密码:
+        <input name="pwd" type="password">
+        角色：
+        <select id="pageSelect" name="pages" onchange="redirectToPage(this)">
+          <!--onchange 是HTML中的一个属性，它用于指定在元素的值发生改变时执行的 JavaScript 代码-->
+          <option value="外卖员登录.html" selected>外卖员</option>
+          <option value="商家登录.html">商家</option>
+          <option value="user_login.html">用户</option>
+          <option value="管理员登录.html">管理员</option>
+        </select>
+
+        <a href="#" onclick="showUserAgreement()">用户协议</a>
+
+        <input type="submit" name="submit" id="submit" value="登陆">
+    </div>
+
+  </div>
+  <script>
+    function showUserAgreement() {
+      alert("用户协议: \n\n欢迎使用我们的外卖网站服务！在您使用我们的服务之前，请仔细阅读以下条款。1. 服务描述我们的外卖网站旨在为顾客提供方便快捷的外卖订购服务。2. 免责声明在法律允许的范围内，我们将尽最大努力确保我们的服务的安全性和可靠性。");
+    }
+  </script>
+
+</body>
+
+</html>

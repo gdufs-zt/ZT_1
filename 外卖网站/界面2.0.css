@@ -1,0 +1,132 @@
+.clearfloat {
+    clear: both;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+/*#menu a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}*/
+#menu a {
+    display: inline-block; /* 将链接元素变为内联块级元素 */
+    margin: 0 10px; /* 设置链接之间的水平间距 */
+    text-decoration: none; /* 去除链接下划线 */
+    color: #333; /* 设置链接文本颜色 */
+    font-size: 16px; /* 设置链接字体大小 */
+}
+form {
+    background-color: #fff;
+    max-width: 350px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1px;
+  }
+  #用户协议 {
+    /*id选择器*/
+    position: absolute;
+    top: 445px;
+    left: 800px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+  }
+  #注册界面 {
+    position: absolute;
+    top: 190px;
+    left: 925px;
+    text-decoration: none;
+    color: #161515;
+  }
+  #注册界面:hover {
+    color: rgb(33, 12, 222);
+  }
+
+  a{
+    margin-top: 150;
+  }
+
+
+
+
+
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  #popup:target {
+    display: block;
+  }
+
+  #popup h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  #popup p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+  }
