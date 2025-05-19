@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.personal_health_system.dao.MenuDao">  <!-- 确保这里的namespace与UserDao接口的全限定名一致 -->
+    <!--关系映射-->
+    <resultMap id="menuMap" type="org.example.personal_health_system.bean.MainMenu">
+        <id column="id" property="id"></id>   <!--前面一个对应数据库中的，后面一个对应实体中的-->
+        <result column="title" property="title"></result>
+        <result column="path" property="path"></result>
+        <collection property="sList" ofType="org.example.personal_health_system.bean.SubMenu">
+            <id column="sid" property="id"></id>   <!--前面一个对应数据库中的，后面一个对应实体中的-->
+            <result column="stitle" property="title"></result>
+            <result column="spath" property="path"></result>
+        </collection>
+    </resultMap>
+
+   <select id="getMenus" resultMap="menuMap">
+       select mm.*, sm.id as sid, sm.title as stitle, sm.path as spath from mainmenu mm, submenu sm where mm.id = sm.mid;
+   </select>
+</mapper>
+
+<!--这一页是对数据库的封装，属于重难点-->
